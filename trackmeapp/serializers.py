@@ -7,7 +7,7 @@ from trackmeapp.models import Task
 
 
 
-class ItemSerializer(serializers.ModelSerializer):
+class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
         fields = ('item_id', 'title', 'description', 'created_at', 'comp_date', 'status')
