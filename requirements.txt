@@ -6,7 +6,6 @@ django-jet==1.0.8
 django-rest-framework==0.1.0
 djangorestframework==3.9.4
 gunicorn==19.9.0
-pkg-resources==0.0.0
 psycopg2==2.8.3
 python-decouple==3.1
 pytz==2019.1
