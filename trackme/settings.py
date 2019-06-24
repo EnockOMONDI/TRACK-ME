@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'djng',
+    'rest_framework.authtoken',
     'trackmeapp',
     'rest_framework',
     'jet.dashboard',

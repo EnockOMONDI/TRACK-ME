@@ -5,7 +5,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status,permissions
 from rest_framework import generics
-
+from django.views.decorators.csrf import csrf_exempt
 
 
 
@@ -18,6 +18,7 @@ user
 '''
 handle index
 '''
+@csrf_exempt
 def index(request, template_name='index.html'):
     return render(request, template_name)
 
@@ -28,6 +29,7 @@ handle GET and POST requests, list of available Task or creating a new Task
 
 
 # get all items
+@csrf_exempt
 @api_view(['GET', 'POST'])
 def get_post_items(request):
     if request.method == 'GET':
@@ -48,7 +50,7 @@ def get_post_items(request):
 DELETE and PUT requests on a specific t object
 '''
 
-
+@csrf_exempt
 @api_view(['DELETE', 'PUT'])
 def update_delete_items(request, pk):
     try:
